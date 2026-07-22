@@ -60,7 +60,7 @@ ltSum (Tip n) = n
 ltSum (Fork l r) = 0 + ltSum l + ltSum r -- so pus o 0 para se perceber que o primeiro nó, obviamente, não é uma folha 
 
 listaLT :: LTree a -> [a]
-listaLT (Tip n) = [n] -- / [] ?
+listaLT (Tip n) = [n] -- listamos as folhas apenas 
 listaLT (Fork l r) = listaLT l ++ listaLT r 
 
 ltHeight :: LTree a -> Int 
