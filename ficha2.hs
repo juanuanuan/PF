@@ -10,7 +10,7 @@ import Data.List
 
 dobros :: [Float] -> [Float]
 dobros [] = []
-dobros (h:t) = 2 * h : dobros t 
+dobros (h:t) = 2 * h : dobros t
 
 numOcorre :: Char -> String -> Int 
 numOcorre _ "" = 0 
@@ -18,13 +18,16 @@ numOcorre char (h:t) | char == h = 1 + numOcorre char t
                      | otherwise = numOcorre char t 
 
 positivos :: [Int] -> Bool 
-positivos (h:t) | h > 0 = positivos t 
+positivos [] = True
+positivos (h:t) | h > 0 = positivos t
                 | otherwise = False 
 
 soPos :: [Int] -> [Int] 
 soPos [] = []
-soPos (h:t) | h > 0 = h : soPos t 
-            | otherwise = soPos t 
+soPos (h:t)
+      | h > 0 = h : soPos t
+      | otherwise = soPos t 
+
 
 somaNeg :: [Int] -> Int 
 somaNeg [] = 0 

@@ -9,7 +9,7 @@ import GHC.Weak (Weak)
 -- ##! Ao contrário de linguagens como C ou Java, Haskell é bastante lazy, i.e, tentamos sempre escrever o mínimo possível na criação de funções.
 
 perimetro :: Float -> Float 
-perimetro r = 2 * pi * r 
+perimetro r = 2 * pi * r
 
 dist :: (Double, Double) -> (Double,Double) -> Double 
 dist (0,0) (0,0) = 0 
